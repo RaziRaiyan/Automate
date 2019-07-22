@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@id/end"
+        motion:duration="300"
+        motion:motionInterpolator="linear">
+        <OnSwipe
+            motion:touchAnchorId="@id/topToolBar"
+            motion:touchAnchorSide="bottom"
+            motion:dragDirection="dragUp"/>
+
+        <ConstraintSet android:id = "@+id/start">
+            <Constraint
+                android:id="@id/topToolBar"
+                android:layout_margin="8dp"
+                android:background="@drawable/home_topbar_bg"/>
+        </ConstraintSet>
+
+
+        <ConstraintSet android:id = "@+id/end">
+            <Constraint
+                android:id="@id/topToolBar"
+                android:background="@color/colorWhite"
+                android:layout_margin="0dp" />
+
+        </ConstraintSet>
+    </Transition>
+
+</MotionScene>

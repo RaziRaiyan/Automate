@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_create_acc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:fontFamily="@font/baloo"
+        android:textSize="24sp"
+        android:textColor="@color/colorGray800"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="@color/colorBlue800"
+        android:textSize="14sp"
+        app:fontFamily="@font/baloo"
+        app:layout_constraintStart_toStartOf="@+id/et_username"
+        app:layout_constraintTop_toBottomOf="@id/tv_create_acc" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/white_rounded_bg"
+        android:elevation="2dp"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/colorGray800"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tv_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Phone Number"
+        android:textColor="@color/colorBlue800"
+        android:textSize="14sp"
+        app:fontFamily="@font/baloo"
+        app:layout_constraintStart_toStartOf="@+id/et_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/et_username" />
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/white_rounded_bg"
+        android:elevation="2dp"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:hint="0123456789"
+        android:letterSpacing="0.3"
+        android:inputType="phone"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/colorGray800"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phoneNumber"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Password"
+        android:textColor="@color/colorBlue800"
+        android:textSize="14sp"
+        app:fontFamily="@font/baloo"
+        app:layout_constraintStart_toStartOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/white_rounded_bg"
+        android:drawableRight="@drawable/ic_eye"
+        android:elevation="2dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginRight="32dp"
+        android:textColor="@color/colorGray800"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/tv_confirm_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Confirm Password"
+        android:textColor="@color/colorBlue800"
+        android:textSize="14sp"
+        app:fontFamily="@font/baloo"
+        app:layout_constraintStart_toStartOf="@+id/et_confirm_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <EditText
+        android:id="@+id/et_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/white_rounded_bg"
+        android:drawableRight="@drawable/ic_eye"
+        android:drawablePadding="8dp"
+        android:elevation="2dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="32dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/colorGray800"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirm_password"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ic_cross_red"
+        app:layout_constraintBottom_toBottomOf="@id/et_confirm_password"
+        app:layout_constraintLeft_toRightOf="@id/et_confirm_password"
+        app:layout_constraintTop_toTopOf="@id/et_confirm_password" />
+
+    <Button
+        android:id="@+id/btn_signUp"
+        style="@style/CustomGradientRaisedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/candal"
+        android:text="SignUp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_confirm_password" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
